@@ -103,6 +103,7 @@ promises that blockchain technology gives us with assumption of improvements in 
 scalability domains in the underlying technology. One use case of blockchain technology could be
 suitable for reputation system where in the current services that provides reputation systems are
 untrustable in different aspects. Such as</p>
+  <br/>
 <ul>
 <li><p>Service provider owns the reputation system, allowing him to do arbitrary changes without
 getting permission of anyone.</p>
@@ -111,9 +112,11 @@ getting permission of anyone.</p>
 to understand better what is the situation, currently companies are even built on sole-purpose
 of cheating in reputation algorithms under the name of public relations.</p>
 </li>
+    <br/>
 <li><p>Each company has its own reputation system making impossible to achieve a uniquely
 identified, whole purpose reputation system (eBay, amazon).</p>
 </li>
+    <br/>
 </ul>
 <p>So in this proposal our aim is to design a blockchain system with the purpose of solving the problems
 that we are facing with the current services and try to address the new problems that possible to occur
@@ -152,26 +155,38 @@ customer-centric which allows only customer to rate the transaction. Uses blind 
 sake of anonymity and privacy, however if we want to implement a reputation mechanism it
 contradicts with the nature of the reputation. Lastly In the proposal of EIGENTRUST, it defines 5
 points that any p2p reputation systems should address a solution</p>
+    <br/>
 <ul>
+    <br/>
 <li>system should be self-policing no central authority.</li>
+    <br/>
 <li>privacy and anonymity</li>
+    <br/>
 <li>not assign any profit to newcomers (can’t re-establish the status)</li>
+    <br/>
 <li>minimal overhead in terms of blockchain scalability issue.</li>
+    <br/>
 <li>robust to malicious collectiveness</li>
 </ul>
 <p>Flaws of the reputation systems are in front of the eyes of the people some real world projects are
 started to take place with the promise of solving the major problems that people are facing today.
 DREP FOUNDATION[7] is an example where they are trying to create reputation management
 Framework. In their proposal they claim are able to achieve</p>
+    <br/>
 <ul>
 <li>Verify user identity, protection against duplication</li>
+    <br/>
 <li>bi-directional reputation system</li>
+    <br/>
 <li>general accepted reputations of individual</li>
+    <br/>
 <li>Token based incentive mechanism</li>
+    <br/>
 </ul>
 <p>However, no real-world implementation currently can be tested to see what percentage they have
 achieved what they are claiming.</p>
 <h2 id="keen-intro-to-blockchain">Keen intro to Blockchain</h2>
+    <br/>
 <p>All the blockchains that are introduced to our life are based on the same concept of distributed ledgers
 and encryption. There are many types of blockchain platforms today that enables people to creating
 distributed and decentralized applications. Main benefits of blockchain comes from its
@@ -224,10 +239,12 @@ mechanism we can achieve a voting scheme that users are going to be honest.
 an incentive mechanism to make users stay honest. Schelling coin working can be seen below..
 An example ballot can be like this;</p>
 <p>Q-if which country has better economy?</p>
+    <br/>
 <ul>
 <li>A- America</li>
 <li>B- Kenya</li>
 </ul>
+    <br/>
 <p>Each user that has specific amount of that coin can be in voting. As you can guest most of the
 majority will give their vote on America. So America is selected as right answer. Parties who voted in
 same as the majority will gain 10% of the coins. Parties who voted opposite side will lose 10% of
@@ -238,8 +255,11 @@ Q-Alice gave 5 eths to bob for receiving Beethoven music sample, Bob gave Alice 
 <p>Alice rate bob as 0. (meaning not satisfied).Bob release a public ballot that he thinks he is right?
 All the specified details in the ballot are publicly available on Ethereum blockchain.</p>
 <ul>
+    <br/>
 <li>A-Alice</li>
+    <br/>
 <li>B-Bob</li>
+    <br/>
 </ul>
 <p>Majority of the voters will vote for Alice. So the reputation points were given by Alice is accepted as
 a right by the majority. However, in our system options of the ballot should be associated with the
@@ -307,24 +327,31 @@ web2 model will decrease the adoption time of the users</p>
 <h3 id="architecture-and-workflow-of-smart-contracts">Architecture and workflow of smart contracts</h3>
 <p>Three different contracts will be implemented into system</p>
 <ul>
+    <br/>
 <li><p>REPUTATION CONTRACT-keep track of users in the system and their associated kleos and eth</p>
 </li>
+    <br/>
 <li><p>SERVICE CONTRACT-Payment is done via Service contract , invokes the Rate contract</p>
 </li>
+    <br/>
 <li><p>-RATE CONTRACT-Customer rates the service via rate contract.</p>
 </li>
+    <br/>
 <li><p>VOTING CONTRACT- Allows users to create a voting scheme in dapp
 balance. Users will be defined in two categories however they will have common properties</p>
 </li>
+    <br/>
 </ul>
 <p>Figure below shows the architecture of smart contract. Figure 3</p>
 <p>IMAGE</p>
+    <br/>
 <ul>
 <li><p>User can register or login website with their associated EOA. Registering an account will cost
 some gas + 1 ether. This ether will be stored in smart contract with mapping to corresponding
 public key of EOA that send the ether. this prevents user to open multiple account in order to
 create multiple identities over the system and for incentive mechanism to nodes stay honest.Registering will invoke reputation manager contract. Users can register as a customer or
 service provider</p>
+    <br/>
 </li>
 <li><p>From application customers and service providers can agree service. For the simplicity let’s
 assume payment going to done via cryptocurrency. To understand procedure better example
@@ -332,6 +359,7 @@ can be given as Customer will agree a job of creating a flyer content from servi
 Service provider creates a service contract payment should be done via service contract. As
 soon as customer receives the content, he demanded payment is done by service contract.
 Automatically invokes the rate contract for customer to rate customer</p>
+    <br/>
 </li>
 <li><p>Customer is not satisfied with the work give rate of 0. However, service provider thinks this is
 unfair.</p>
