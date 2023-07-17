@@ -75,10 +75,13 @@ li a:hover {
 }
   </style>
   <body>
-    <nav>
-
-      <li>DASDASDAS</li>
-    </nav>
+ <ul class="nav">
+    
+        <li><a class="active" href="/index.html">Home</a></li>
+        <li>
+            <img src="images/pirate-flag.jpg" alt="Mountain">
+           </li>
+      </ul>
 <h1>Components of the Full Stack IoT System:</h1>
 <ul>
 
@@ -94,8 +97,10 @@ MQTT Communication Protocol: The MQTT (Message Queuing Telemetry Transport) prot
   <li>
 Virtualized Broker Service: A broker service runs on a virtualized Linux OS, acting as a central hub for data exchange. It receives messages from multiple edge devices, including Raspberry Pi, and routes them to their respective destinations.
 </li>
+  <li>
 Data Forwarding to Cloud Services: The virtualized broker service can forward the sensor data to cloud services, data warehouses, or other applications for further processing, analysis, and storage.
-<li>
+</li>
+  <li>
 Data Storage and Database: Cloud services or databases store the received sensor data, enabling historical analysis and retrieval of insights.
 </li>
   <li>
