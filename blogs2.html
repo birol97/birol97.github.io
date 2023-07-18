@@ -28,7 +28,7 @@ li a {
   padding: 24px 46px;
   text-decoration: none;
 }
-li img{
+nav li img{
 
     display: block;
   color: white;
@@ -39,7 +39,21 @@ li img{
 
 }
 
+nav {
+  display: flex; /* 1 */
+  justify-content: space-between; /* 2 */
+  padding: 1rem 2rem; /* 3 */
+  background: #cfd8dc; /* 4 */
+}
 
+nav ul {
+  display: flex; /* 5 */
+  list-style: none; /* 6 */
+}
+
+nav li {
+  padding-left: 1rem; /* 7! */
+}
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
@@ -72,13 +86,13 @@ li a:hover {
 }
   </style>
   <body>
- <ul class="nav">
-    
-      <a class="active" href="/index.html">Home</a></li>
-        <li>
-            <img src="images/pirate-flag.jpg" alt="Mountain">
-           </li>
-      </ul>
+<nav>
+  <h2>Full stack IOT solution</h2>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+   
+  </ul>
+</nav>
 <h1>Components of the Full Stack IoT System:</h1>
 <ul>
 
